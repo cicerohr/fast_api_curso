@@ -8,7 +8,8 @@ de pacotes.
 > atender as minhas necessidades; portanto, não há qualquer garantia ou suporte 
 > para este.
 
-- [O que ser&aacute; feito?](#o-que-ser&aacute;-feito?)
+## O que ser&aacute; feito?
+
 - [Instalar pyenv para Windows](#instalar-pyenv-para-windows)
 - [Instalar o pipx](#instalar-o-pipx)
 - [Criar um projeto FastApi com o Poetry](#criar-um-projeto-fastapi-com-o-poetry)
@@ -23,27 +24,9 @@ de pacotes.
 
 ---
 
-## O que ser&aacute; feito?
-
-- Instalar o [pyenv](https://github.com/pyenv-win/pyenv-win) para Windows (Ferramenta que permite instalar e gerenciar várias versões do Python);
-  - Instalar uma versão Python;
-- Instalar o [pipx](https://github.com/pypa/pipx?tab=readme-ov-file#on-windows) (Instala e executa aplicativos Python em ambientes isolados);
-  - Instalar o [Poetry](https://python-poetry.org/) (Gerenciador de pacotes Python e seu ambiente virtual);
-  - Instalar o [ignr](https://github.com/Antrikshy/ignr.py?tab=readme-ov-file) (Ignorador de arquivos);
-- Criar um projeto FastApi com o Poetry;
-- Abrir o projeto no PyCharm;
-- Configurar o [Poetry](https://python-poetry.org/);
-- Instalar o [FastApi](https://fastapi.tiangolo.com/);
-  - Executar o FastApi;
-- Ferramentas de desenvolvimento;
-  - instalar [Ruff](https://docs.astral.sh/ruff/installation/) (Analisador estático e formatador de código);
-  - Instalar [PyTest](https://docs.pytest.org/en/latest/) (Testes unitários);
-  - Instalar [pytest-cov](https://pypi.org/project/pytest-cov/) (Cobertura de testes);
-  - Instalar [Taskipy](https://github.com/taskipy/taskipy?tab=readme-ov-file) (_Script_ para execução de tarefas);
-
----
-
 ## Instalar pyenv para Windows
+
+O pyenv é uma ferramenta que permite instalar e gerenciar várias versões do Python.
 
 ### Instalar pyenv pelo PowerShell
 
@@ -84,9 +67,13 @@ de pacotes.
     ~~~
 \* Suporte para o erro [**UnauthorizedAccess**](https://github.com/pyenv-win/pyenv-win/blob/master/docs/installation.md#powershell) no Windows.
 
+[Topo](#estudo-de-caso-fastapi-com-poetry)
+
 ---
 
 ## Instalar o pipx
+
+O pipx é uma ferramenta que instala e executa aplicativos do Python em ambientes isolados.
 
 1. Instale o pipx com o seguinte comando no PowerShell:
     ~~~PowerShell
@@ -103,30 +90,36 @@ de pacotes.
     pipx ensurepath
     ~~~
    
-   1. Verifique se o pipx foi adicionado ao PATH com o seguinte comando no PowerShell:
+   - Verifique se o pipx foi adicionado ao PATH com o seguinte comando no PowerShell:
        ~~~PowerShell
        where pipx
        ~~~
    
-   2. Instale o Poetry com o seguinte comando no PowerShell:
-       ~~~PowerShell
-       pipx install poetry
-       ~~~
+4. Instale o Poetry com o seguinte comando no PowerShell:
+
+    O Poetry é um gerenciador de pacotes Python e seu ambiente virtual.
+    ~~~PowerShell
+    pipx install poetry
+    ~~~
    
-4. Verifique se o Poetry foi instalado corretamente com o seguinte comando no PowerShell:
+5. Verifique se o Poetry foi instalado corretamente com o seguinte comando no PowerShell:
     ~~~PowerShell
     poetry --version
     ~~~
    
-5. Instale o ignr com o seguinte comando no PowerShell:
+6. Instale o ignr com o seguinte comando no PowerShell:
     ~~~PowerShell
     pipx install ignr
     ~~~
    
-6. Lista todos os modelos .gitignore disponíveis no gitignore.io.
+7. Lista todos os modelos .gitignore disponíveis no gitignore.io.
+
+    O ignr é um gerenciador de modelos de arquivos [gitignore](https://git-scm.com/docs/gitignore).
     ~~~PowerShell
     ignr -l
     ~~~
+
+[Topo](#estudo-de-caso-fastapi-com-poetry)
 
 ---
 
@@ -155,11 +148,16 @@ de pacotes.
     ~~~PowerShell
     pyenv local <version>
     ~~~
+
+[Topo](#estudo-de-caso-fastapi-com-poetry)
+
 ---
 
 ## Abrir o projeto no PyCharm
 
 Abra o projeto no PyCharm como um projeto existente.
+
+[Topo](#estudo-de-caso-fastapi-com-poetry)
 
 ---
 
@@ -169,6 +167,8 @@ Crie o ambiente virtual com o seguinte comando no PowerShell:
 ~~~PowerShell
 poetry install
 ~~~~
+
+[Topo](#estudo-de-caso-fastapi-com-poetry)
 
 ---
 
@@ -187,12 +187,16 @@ fastapi dev src/fast_api_curso/app.py
 - Documentação automática interativa do FastApi
   - [http://127.0.0.1:8000/redoc](http://127.0.0.1:8000/redoc)
   - [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
- 
+
+[Topo](#estudo-de-caso-fastapi-com-poetry)
+
 ---
 
 ## Ferramentas de desenvolvimento
 
 ### Instalar Ruff
+
+A ferramenta Ruff é um analisador estático (linter) e formatador de código Python.
 
 Instale o Ruff com o seguinte comando no terminal:
 ~~~PowerShell
@@ -216,6 +220,8 @@ quote-style = "single"
 
 ### Instalar PyTest e PyTest-Cov
 
+O PyTest é um framework de testes unitários para Python e o PyTest-Cov é um analisador de cobertura de testes.
+
 Instale o PyTest e PyTest-Cov com o seguinte comando no terminal:
 ~~~PowerShell
 poetry add --group dev pytest pytest-cov
@@ -230,6 +236,8 @@ addopts = "-p no:warnings"
 
 ### Instalar Taskipy
 
+A ferramenta Taskipy é um gerenciador de tarefas para Python.
+
 Instale o Taskipy com o seguinte comando no terminal:
 ~~~PowerShell
 poetry add --group dev taskipy
@@ -238,7 +246,6 @@ poetry add --group dev taskipy
 #### Configurar as tarefas
 
 Configure o Taskipy editando o arquivo `pyproject.toml`:
-
 ~~~toml
 [tool.taskipy.tasks]
 lint = "ruff check . && ruff check . --diff"
@@ -259,6 +266,8 @@ post_test = "coverage html"
 - Para ver o relatório de cobertura, execute o comando `task post_test` no terminal.
     - Escreve o relatório HTML em [http://localhost:63342/fast_api_curso/htmlcov/index.html](http://localhost:63342/fast_api_curso/htmlcov/index.html)
 
+[Topo](#estudo-de-caso-fastapi-com-poetry)
+
 ---
 
 ## Referências:
@@ -271,8 +280,12 @@ SMITH, C. **pipx — Install and Run Python Applications in Isolated Environment
 
 POETRY COMMUNITY. **Poetry: Python packaging and dependency management made easy**. Disponível em: <https://python-poetry.org/docs/>.
 
-YADAV, A; WARD, A. **ignr.py**. Disponível em:<https://github.com/Antrikshy/ignr.py?tab=readme-ov-file#ignrpy>. 
+YADAV, A; WARD, A. **ignr.py**. Disponível em:<https://github.com/Antrikshy/ignr.py?tab=readme-ov-file#ignrpy>.
+
+GIT COMMUNITY. **Git - gitignore Documentation**. Disponível em: <https://git-scm.com/docs/gitignore/pt_BR>.
 
 \* Obrigado [@dunossauro](https://dunossauro.com/) pelo excelente conteúdo! :smile:
+
+[Topo](#estudo-de-caso-fastapi-com-poetry)
 
 ---
