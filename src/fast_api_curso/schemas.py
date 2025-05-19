@@ -4,6 +4,6 @@ from pydantic import BaseModel
 
 
 class Message(BaseModel):
-    """Mensagem."""
+    """Validador de mensagem."""
 
     message: str
