@@ -265,6 +265,7 @@ post_test = "coverage html"
 - Para rodar os testes, execute o comando `task test` no terminal;
 - Para ver o relatório de cobertura, execute o comando `task post_test` no terminal.
     - Escreve o relatório HTML em [http://localhost:63342/fast_api_curso/htmlcov/index.html](http://localhost:63342/fast_api_curso/htmlcov/index.html)
+- Para listar as tarefas, execute o comando `task --list` no terminal.
 
 [Topo](#estudo-de-caso-fastapi-com-poetry)
 
