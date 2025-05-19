@@ -187,6 +187,17 @@ fastapi dev src/fast_api_curso/app.py
 - Documentação automática interativa do FastApi
   - [http://127.0.0.1:8000/redoc](http://127.0.0.1:8000/redoc)
   - [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
+- Usando o FastApi na rede local
+
+    Este comando irá executar o servidor do FastApi na rede local podendo ser acessado por outros dispositivos da rede.
+    ~~~PowerShell
+    fastapi dev src/fast_api_curso/app.py --host 0.0.0.0
+    ~~~
+
+    Acesse o seguinte endereço para acessar o servidor do FastApi na rede local:
+    ~~~html
+    http://<ip-address>:8000/
+    ~~~
 
 [Topo](#estudo-de-caso-fastapi-com-poetry)
 
@@ -285,7 +296,7 @@ YADAV, A; WARD, A. **ignr.py**. Disponível em:<https://github.com/Antrikshy/ign
 
 GIT COMMUNITY. **Git - gitignore Documentation**. Disponível em: <https://git-scm.com/docs/gitignore/pt_BR>.
 
-\* Obrigado [@dunossauro](https://dunossauro.com/) pelo excelente conteúdo! :smile:
+\* Obrigado [@dunossauro](https://dunossauro.com/) pelo excelente conteúdo!:smile:
 
 [Topo](#estudo-de-caso-fastapi-com-poetry)
 
