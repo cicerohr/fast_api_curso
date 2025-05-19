@@ -1,6 +1,9 @@
 """Aquivo principal."""
+
 from http import HTTPStatus
+
 from fastapi import FastAPI
+
 from fast_api_curso.schemas import Message
 
 app = FastAPI()
