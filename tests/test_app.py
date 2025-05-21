@@ -88,17 +88,6 @@ def test_update_user_not_found(client):
     assert response.status_code == HTTPStatus.NOT_FOUND
 
 
-def test_delete_user(client):
-    """Deleta um user do json."""
-    response = client.delete('/users/1')
-    assert response.status_code == HTTPStatus.OK
-    assert response.json() == {
-        'id': 1,
-        'username': 'John Doe',
-        'email': 'john@doe.com',
-    }
-
-
 def test_delete_user_not_found(client):
     """Verifica se o user nao foi encontrado."""
     response = client.delete('/users/2')
@@ -112,3 +101,31 @@ def test_exercicio_ola_mundo_em_html(client):
     response = client.get('/exercicio-html')
     assert response.status_code == HTTPStatus.OK
     assert '<h1>Olá Mundo!</h1>' in response.text
+
+
+def test_exercicio_get_user(client):
+    """Retorna um user específico em json."""
+    response = client.get('/user/1')
+    assert response.status_code == HTTPStatus.OK
+    assert response.json() == {
+        'id': 1,
+        'username': 'John Doe',
+        'email': 'john@doe.com',
+    }
+
+
+def test_exercicio_get_user_not_found(client):
+    """Verifica se o user nao foi encontrado."""
+    response = client.get('/user/2')
+    assert response.status_code == HTTPStatus.NOT_FOUND
+
+
+def test_delete_user(client):
+    """Deleta um user do json."""
+    response = client.delete('/users/1')
+    assert response.status_code == HTTPStatus.OK
+    assert response.json() == {
+        'id': 1,
+        'username': 'John Doe',
+        'email': 'john@doe.com',
+    }

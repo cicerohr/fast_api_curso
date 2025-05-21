@@ -86,3 +86,14 @@ def exercicio_aula_02():
         </body>
     </html>
     """
+
+
+@app.get('/user/{user_id}', response_model=UserPublic)
+def exercicio_aula_03(user_id: int):
+    """Exercício 03 - Retorna um user específico em json."""
+    if user_id < 1 or user_id > len(database):
+        raise HTTPException(
+            status_code=HTTPStatus.NOT_FOUND,
+            detail='User not found!',
+        )
+    return database[user_id - 1]
