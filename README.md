@@ -296,7 +296,7 @@ YADAV, A; WARD, A. **ignr.py**. Disponível em:<https://github.com/Antrikshy/ign
 
 GIT COMMUNITY. **Git - gitignore Documentation**. Disponível em: <https://git-scm.com/docs/gitignore/pt_BR>.
 
-\* Obrigado [@dunossauro](https://dunossauro.com/) pelo excelente conteúdo!:smile:
+\* Obrigado [@dunossauro](https://dunossauro.com/) pelo excelente conteúdo! :smile:
 
 [Topo](#estudo-de-caso-fastapi-com-poetry)
 
