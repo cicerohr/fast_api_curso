@@ -95,7 +95,7 @@ def test_delete_user_not_found(client):
     assert response.json() == {'detail': 'User not found!'}
 
 
-def test_exercicio_ola_mundo_em_html(client):
+def test_exercicio_01_ola_mundo_em_html(client):
     """Retorna uma mensagem em html."""
     # client = TestClient(app)
     response = client.get('/exercicio-html')
@@ -103,7 +103,7 @@ def test_exercicio_ola_mundo_em_html(client):
     assert '<h1>Olá Mundo!</h1>' in response.text
 
 
-def test_exercicio_get_user(client):
+def test_exercicio_03_get_user(client):
     """Retorna um user específico em json."""
     response = client.get('/user/1')
     assert response.status_code == HTTPStatus.OK
@@ -114,7 +114,7 @@ def test_exercicio_get_user(client):
     }
 
 
-def test_exercicio_get_user_not_found(client):
+def test_exercicio_03_get_user_not_found(client):
     """Verifica se o user nao foi encontrado."""
     response = client.get('/user/2')
     assert response.status_code == HTTPStatus.NOT_FOUND
