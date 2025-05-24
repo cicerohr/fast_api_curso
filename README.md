@@ -10,8 +10,8 @@ de pacotes.
 
 ## O que ser&aacute; feito?
 
-- [Instalar pyenv para Windows](#instalar-pyenv-para-windows)
-- [Instalar o pipx](#instalar-o-pipx)
+- [Instalar pyenv para Windows](#instalar-pyenv-para-windows2)
+- [Instalar o pipx](#instalar-o-pipx3)
 - [Criar um projeto FastApi com o Poetry](#criar-um-projeto-fastapi-com-o-poetry)
 - [Abrir o projeto no PyCharm](#abrir-o-projeto-no-pycharm)
 - [Configurar o Poetry](#configurar-o-poetry)
@@ -24,7 +24,7 @@ de pacotes.
 
 ---
 
-## Instalar pyenv para Windows
+## Instalar pyenv para Windows[^2]
 
 O pyenv é uma ferramenta que permite instalar e gerenciar várias versões do Python.
 
@@ -71,7 +71,7 @@ O pyenv é uma ferramenta que permite instalar e gerenciar várias versões do P
 
 ---
 
-## Instalar o pipx
+## Instalar o pipx[^3]
 
 O pipx é uma ferramenta que instala e executa aplicativos do Python em ambientes isolados.
 
@@ -80,44 +80,42 @@ O pipx é uma ferramenta que instala e executa aplicativos do Python em ambiente
     pip install --upgrade pipx
     ~~~
    
-2. Verifique se o pipx foi instalado corretamente com o seguinte comando no PowerShell:
-    ~~~PowerShell
-    pipx --version
-    ~~~
+   - Verifique se o pipx foi instalado corretamente com o seguinte comando no PowerShell:
+       ~~~PowerShell
+       pipx --version
+       ~~~
    
-3. Adicione o pipx ao PATH com o seguinte comando no PowerShell:
-    ~~~PowerShell
-    pipx ensurepath
-    ~~~
+   - Adicione o pipx ao PATH com o seguinte comando no PowerShell:
+       ~~~PowerShell
+       pipx ensurepath
+       ~~~
    
    - Verifique se o pipx foi adicionado ao PATH com o seguinte comando no PowerShell:
        ~~~PowerShell
        where pipx
        ~~~
    
-4. Instale o Poetry com o seguinte comando no PowerShell:
-
+2. Instale o Poetry[^4] com o seguinte comando no PowerShell:
     O Poetry é um gerenciador de pacotes Python e seu ambiente virtual.
     ~~~PowerShell
     pipx install poetry
     ~~~
    
-5. Verifique se o Poetry foi instalado corretamente com o seguinte comando no PowerShell:
-    ~~~PowerShell
-    poetry --version
-    ~~~
+   - Verifique se o Poetry foi instalado corretamente com o seguinte comando no PowerShell:
+       ~~~PowerShell
+       poetry --version
+       ~~~
    
-6. Instale o ignr com o seguinte comando no PowerShell:
-    ~~~PowerShell
+3. Instale o ignr[^5] com o seguinte comando no PowerShell:
+   O ignr é um gerenciador de modelos de arquivos [gitignore](https://git-scm.com/docs/gitignore)[^6]. 
+   ~~~PowerShell
     pipx install ignr
     ~~~
    
-7. Lista todos os modelos .gitignore disponíveis no gitignore.io.
-
-    O ignr é um gerenciador de modelos de arquivos [gitignore](https://git-scm.com/docs/gitignore).
-    ~~~PowerShell
-    ignr -l
-    ~~~
+   - Lista todos os modelos .gitignore disponíveis no gitignore.io.
+       ~~~PowerShell
+       ignr -l
+       ~~~
 
 [Topo](#estudo-de-caso-fastapi-com-poetry)
 
@@ -284,17 +282,17 @@ post_test = "coverage html"
 
 ## Referências:
 
-MENDES, E. **FastAPI do Zero**. Disponível em:<https://fastapidozero.dunossauro.com/estavel/>.\*
+[^1]: MENDES, E. **FastAPI do Zero**. Disponível em:<https://fastapidozero.dunossauro.com/estavel/>.\*
 
-KOTARI, K. K. **pyenv for Windows**. Disponível em:<https://github.com/pyenv-win/pyenv-win?tab=readme-ov-file#introduction>.
+[^2]: KOTARI, K. K. **pyenv for Windows**. Disponível em:<https://github.com/pyenv-win/pyenv-win?tab=readme-ov-file#introduction>.
 
-SMITH, C. **pipx — Install and Run Python Applications in Isolated Environments**. Disponível em: <https://pipx.pypa.io/stable/installation/>.
+[^3]: SMITH, C. **pipx — Install and Run Python Applications in Isolated Environments**. Disponível em: <https://pipx.pypa.io/stable/installation/>.
 
-POETRY COMMUNITY. **Poetry: Python packaging and dependency management made easy**. Disponível em: <https://python-poetry.org/docs/>.
+[^4]: POETRY COMMUNITY. **Poetry: Python packaging and dependency management made easy**. Disponível em: <https://python-poetry.org/docs/>.
 
-YADAV, A; WARD, A. **ignr.py**. Disponível em:<https://github.com/Antrikshy/ignr.py?tab=readme-ov-file#ignrpy>.
+[^5]: YADAV, A; WARD, A. **ignr.py**. Disponível em:<https://github.com/Antrikshy/ignr.py?tab=readme-ov-file#ignrpy>.
 
-GIT COMMUNITY. **Git - gitignore Documentation**. Disponível em: <https://git-scm.com/docs/gitignore/pt_BR>.
+[^6]: GIT COMMUNITY. **Git - gitignore Documentation**. Disponível em: <https://git-scm.com/docs/gitignore/pt_BR>.
 
 \* Obrigado [@dunossauro](https://dunossauro.com/) pelo excelente conteúdo! :smile:
 
