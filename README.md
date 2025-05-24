@@ -4,6 +4,8 @@ Este tutorial tem o objetivo de configurar o ambiente de desenvolvimento para o
 FastApi utilizando o Pycharm, como editor de código, e o Poetry para gerenciamento 
 de pacotes.
 
+\* Obrigado [@dunossauro](https://dunossauro.com/)[^1] pelo excelente conteúdo! :smile:
+
 > **ATENÇÃO**: este é um roteiro para instalação em uma máquina Windows visando 
 > atender as minhas necessidades; portanto, não há qualquer garantia ou suporte 
 > para este.
@@ -293,9 +295,3 @@ post_test = "coverage html"
 [^5]: YADAV, A; WARD, A. **ignr.py**. Disponível em:<https://github.com/Antrikshy/ignr.py?tab=readme-ov-file#ignrpy>.
 
 [^6]: GIT COMMUNITY. **Git - gitignore Documentation**. Disponível em: <https://git-scm.com/docs/gitignore/pt_BR>.
-
-\* Obrigado [@dunossauro](https://dunossauro.com/) pelo excelente conteúdo! :smile:
-
-[Topo](#estudo-de-caso-fastapi-com-poetry)
-
----
