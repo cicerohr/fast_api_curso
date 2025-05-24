@@ -38,6 +38,7 @@ O pyenv é uma ferramenta que permite instalar e gerenciar várias versões do P
     ~~~
    
 2. Reiniciar o PowerShell.
+
 3. Verifique se o pyenv foi instalado corretamente com o seguinte comando no PowerShell:
     ~~~PowerShell
     pyenv --version
@@ -98,6 +99,7 @@ O pipx é uma ferramenta que instala e executa aplicativos do Python em ambiente
        ~~~
    
 2. Instale o Poetry[^4] com o seguinte comando no PowerShell:
+
     O Poetry é um gerenciador de pacotes Python e seu ambiente virtual.
     ~~~PowerShell
     pipx install poetry
@@ -109,6 +111,7 @@ O pipx é uma ferramenta que instala e executa aplicativos do Python em ambiente
        ~~~
    
 3. Instale o ignr[^5] com o seguinte comando no PowerShell:
+
    O ignr é um gerenciador de modelos de arquivos [gitignore](https://git-scm.com/docs/gitignore)[^6]. 
    ~~~PowerShell
     pipx install ignr
