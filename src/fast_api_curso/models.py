@@ -17,7 +17,7 @@ class User:
     implementam as características de cada registro da tabela com
     mapped_column.
 
-    Attributes:
+    Args:
         id (int): ID do usuário.
         username (str): Nome do usuário.
         email (str): Email do usuário.
