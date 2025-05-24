@@ -33,8 +33,8 @@ def _mock_db_time(*, model, time=datetime(2025, 5, 20)):
     """Mock para o evento pre_commit.
 
     Args:
-        model (object): Objeto model.
-        time (datetime): Data para o teste de criação do usuário.
+        model (object): Objeto model
+        time (datetime): Data para o teste de criação do usuário
 
     Returns:
         None
@@ -46,15 +46,17 @@ def _mock_db_time(*, model, time=datetime(2025, 5, 20)):
         testes.
 
         Args:
-            mapper (object): Objeto mapper.
-            connection (object): Objeto connection.
-            target (object): Objeto target.
+            mapper (object): Objeto mapper
+            connection (object): Objeto connection
+            target (object): Objeto target
 
         Returns:
             None
         """
         if hasattr(target, 'created_at'):
             target.created_at = time
+        if hasattr(target, 'updated_at'):  # Exercício 02 aula 04
+            target.updated_at = time
 
     event.listen(
         model,

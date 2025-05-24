@@ -17,12 +17,13 @@ class User:
     implementam as características de cada registro da tabela com
     mapped_column.
 
-    Args:
-        id (int): ID do usuário.
-        username (str): Nome do usuário.
-        email (str): Email do usuário.
-        password (str): Senha do usuário.
-        created_at (datetime): Data de criação do usuário.
+    Attributes:
+        id (int): ID do usuário
+        username (str): Nome do usuário
+        email (str): Email do usuário
+        password (str): Senha do usuário
+        created_at (datetime): Data de criação do usuário
+        updated_at (datetime): Data de atualização do usuário
 
     Returns:
         None
@@ -36,4 +37,9 @@ class User:
     created_at: Mapped[datetime] = mapped_column(
         init=False,
         server_default=func.now(),
+    )
+    updated_at: Mapped[datetime] = mapped_column(  # Exercício 01 aula 04
+        init=False,
+        server_default=func.now(),
+        onupdate=func.now(),
     )
